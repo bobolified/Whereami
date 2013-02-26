@@ -25,6 +25,9 @@
         // And we want it to be as accurate as possible
         // regardless of how much time/power it takes
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        [locationManager setDistanceFilter:50];
+        
+        //locationManager.distanceFilter = [[setupInfo objectForKey:kSetupInfoKeyDistanceFilter] doubleValue];
         
         // Tell our manager to start looking for it location immediately
         [locationManager startUpdatingLocation];
