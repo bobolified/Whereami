@@ -26,11 +26,15 @@
         // regardless of how much time/power it takes
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
         [locationManager setDistanceFilter:50];
+        [locationManager setDesiredAccuracy:kCLHeadingFilterNone];
         
         //locationManager.distanceFilter = [[setupInfo objectForKey:kSetupInfoKeyDistanceFilter] doubleValue];
         
         // Tell our manager to start looking for it location immediately
         [locationManager startUpdatingLocation];
+        
+        
+        [locationManager startUpdatingHeading];
     }
     
     return self;
@@ -47,6 +51,12 @@
        didFailWithError:(NSError *)error
 {
     NSLog(@"Could not find location: %@", error);
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didUpdateHeading:(CLHeading *)newHeading
+{
+    NSLog(@"Heading %@", newHeading);
 }
 
 - (void)dealloc
