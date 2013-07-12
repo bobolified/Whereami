@@ -14,30 +14,18 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
     if (self) {
-        // Create location manager object
         locationManager = [[CLLocationManager alloc] init];
-        
-        // There will be a warning from this line of code; ignore it for now
         [locationManager setDelegate:self];
-        
-        // And we want it to be as accurate as possible
-        // regardless of how much time/power it takes
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-        [locationManager setDistanceFilter:50];
-        [locationManager setDesiredAccuracy:kCLHeadingFilterNone];
-        
-        //locationManager.distanceFilter = [[setupInfo objectForKey:kSetupInfoKeyDistanceFilter] doubleValue];
-        
-        // Tell our manager to start looking for it location immediately
-        [locationManager startUpdatingLocation];
-        
-        
-        [locationManager startUpdatingHeading];
     }
     
     return self;
+}
+
+- (void)viewDidLoad
+{
+    [worldView setShowsUserLocation:YES];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
