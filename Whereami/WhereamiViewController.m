@@ -28,23 +28,22 @@
     [worldView setShowsUserLocation:YES];
 }
 
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
+- (void)mapView:(MKMapView *)mapView
+    didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    NSLog(@"%@", newLocation);
+    CLLocationCoordinate2D loc = [userLocation coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+    [worldView setRegion:region animated:YES];
 }
 
-- (void)locationManager:(CLLocationManager *)manager
-       didFailWithError:(NSError *)error
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    NSLog(@"Could not find location: %@", error);
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-       didUpdateHeading:(CLHeading *)newHeading
-{
-    NSLog(@"Heading %@", newHeading);
+    // This method isnt implemented yet - but will be soon.
+    [self findLocation];
+    
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 - (void)dealloc

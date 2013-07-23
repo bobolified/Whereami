@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C3D1E6ED178F8E7600431892 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D1E6EC178F8E7600431892 /* MapKit.framework */; };
+		C3D1E6F01797718900431892 /* BNRMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D1E6EF1797718900431892 /* BNRMapPoint.m */; };
 		E746C0BD16A38C84003723A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E746C0BC16A38C84003723A2 /* UIKit.framework */; };
 		E746C0BF16A38C84003723A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E746C0BE16A38C84003723A2 /* Foundation.framework */; };
 		E746C0C116A38C84003723A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E746C0C016A38C84003723A2 /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		C3D1E6EC178F8E7600431892 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C3D1E6EE1797718900431892 /* BNRMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRMapPoint.h; sourceTree = "<group>"; };
+		C3D1E6EF1797718900431892 /* BNRMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRMapPoint.m; sourceTree = "<group>"; };
 		E746C0B816A38C84003723A2 /* Whereami.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereami.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E746C0BC16A38C84003723A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E746C0BE16A38C84003723A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +98,8 @@
 				E746C0CC16A38C84003723A2 /* WhereamiAppDelegate.m */,
 				E746C0D416A38C84003723A2 /* WhereamiViewController.h */,
 				E746C0D516A38C84003723A2 /* WhereamiViewController.m */,
+				C3D1E6EE1797718900431892 /* BNRMapPoint.h */,
+				C3D1E6EF1797718900431892 /* BNRMapPoint.m */,
 				E746C0D716A38C84003723A2 /* WhereamiViewController.xib */,
 				E746C0C316A38C84003723A2 /* Supporting Files */,
 			);
@@ -185,6 +190,7 @@
 				E746C0C916A38C84003723A2 /* main.m in Sources */,
 				E746C0CD16A38C84003723A2 /* WhereamiAppDelegate.m in Sources */,
 				E746C0D616A38C84003723A2 /* WhereamiViewController.m in Sources */,
+				C3D1E6F01797718900431892 /* BNRMapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
