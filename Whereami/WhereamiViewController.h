@@ -21,4 +21,7 @@
     IBOutlet UITextField *locationTitleField;
 }
 
+- (void)findLocation;
+- (void)foundLocation:(CLLocation *)loc;
+
 @end
